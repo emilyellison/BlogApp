@@ -1,0 +1,163 @@
+/*CSS*/
+
+/* Eric Meyer's Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v2.0 | 20110126 */
+/* License: none (public domain) */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*Emily Ellison*/
+
+nav, .content {
+	padding:10px 300px;
+	font-family:verdana;
+	letter-spacing:-1px;
+}	
+.content {
+	background:-webkit-linear-gradient(bottom, white, ghostwhite);
+}
+nav {
+	font-size:30px;
+	font-weight:bold;
+	background:-webkit-linear-gradient(top, slateblue, darkslateblue);
+	color:white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+a {
+	text-decoration:none;
+	color:darkgreen;
+}
+h2 {
+	font-size:25px;
+	font-weight:bold;
+	padding:10px 0px;
+}
+h3 {
+	font-size:20px;
+	font-weight:bold;
+	padding:10px 0px;
+}
+.delete {
+	color:firebrick;
+	font-weight:normal;
+}
+button {
+	border:1px solid darkslategrey;
+	border-radius:8px;
+	font-size:20px;
+	font-weight:bold;
+	background: -webkit-linear-gradient(top, slateblue, darkslateblue);
+	color:white;
+	padding:10px 20px;
+}
+.creation-date {
+	color:grey;
+}
+.new_post_form {
+	padding:15px 0px;
+	input, label, select, textarea {
+		display:block;
+		font-size:15px;
+		padding:5px 0px;
+		width:300px;
+	}
+	input, textarea {
+		padding:5px 5px;
+	}
+	.submit {
+		border:1px solid darkslategrey;
+		border-radius:8px;
+		font-size:20px;
+		font-weight:bold;
+		background: -webkit-linear-gradient(top, slateblue, darkslateblue);
+		color:white;
+		padding:5px 20px;
+		display:inline;
+	}
+
+}
+.edit_post_form {
+	padding:15px 0px;
+	input, label, select, textarea {
+		display:block;
+		font-size:15px;
+		padding:5px 0px;
+		width:600px;
+	}
+	input, textarea {
+		padding:5px 5px;
+	}
+	.submit {
+		border:1px solid darkslategrey;
+		border-radius:8px;
+		font-size:15px;
+		font-weight:bold;
+		background: -webkit-linear-gradient(top, slateblue, darkslateblue);
+		color:white;
+		padding:5px 20px;
+		display:inline;
+	}
+
+}
+.edit_post_title, .new_post_title {
+	border:1px solid darkslategrey;
+	border-radius:8px;
+	font-size:15px;
+	font-weight:bold;
+	background: -webkit-linear-gradient(top, silver, slategrey);
+	color:white;
+	padding:5px 20px;
+	display:inline;
+	text-shadow: -1px 0 darkslategrey, 0 1px darkslategrey, 1px 0 darkslategrey, 0 -1px darkslategrey;
+}
+#new_post {
+	float:left;
+}
+#recent_posts {
+	float:right;
+	width:700px;
+}

@@ -1,0 +1,72 @@
+<div id='new_post'>
+	<h2>Create a Post</h2>
+	<br/>
+	<button class='new_post_title'>
+		New Post
+	</button>
+	<div class='new_post_form'>
+		<%= form_for :new_post, :url => '/' do |f| %>
+
+			<%= f.label :title %>
+			<%= f.text_field :title %>
+	
+			<%= f.label :mood %>
+			<%= f.text_field :mood %>
+	
+			<%= f.label :content %>
+			<%= f.text_area :content %>
+			<br/><br/>
+			<%= f.submit 'Post', class: 'submit' %>
+
+		<% end %>
+	</div>
+</div>
+<div id='recent_posts'>
+<ul>
+	<h2>Recent Posts</h2>
+	<br/>
+
+	<% @posts.each do |post| %>
+		<li>
+			<h3>
+				<span class='toggleLink'>
+					<%= post.title %>
+				</span>
+				<%= link_to 'x',
+				 		"/#{post.id}",
+						:method => :delete,
+						:confirm => 'Sure about that?', 
+						:class => 'delete' %>
+			</h3>
+			<div class='toggle'>
+				<p>
+					<%= post.content %>
+					<br/><br/>
+					<span class='creation-date'><%= post.created_at %></span>
+					<br/><br/>
+					<div class='edit_post_title'>Edit Post</div>
+					<div class='edit_post_form'>
+						<%= form_for :edit_post, :url => "/#{post.id}", :method => :put do |f| %>
+
+							<%= f.label :title %>
+							<%= f.text_field :title, :value => post.title %>
+
+							<%= f.label :mood %>
+							<%= f.text_field :mood, :value => post.mood %>
+
+							<%= f.label :content %>
+							<%= f.text_area :content, :value => post.content %>
+							<br/><br/>
+							<%= f.submit 'Update', class: 'submit' %>
+
+						<% end %>
+					</div>
+				</p>
+			</div>
+			<br/>
+
+		</li>
+	<% end %>
+</ul>
+</div>
+
