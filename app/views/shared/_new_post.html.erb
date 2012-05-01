@@ -1,0 +1,22 @@
+
+	<h2>Create a Post</h2>
+	<br/>
+	<button class='new_post_title'>
+		New Post
+	</button>
+	<div class='new_post_form'>
+		<%= form_for :new_post, :url => '/' do |f| %>
+
+			<%= f.label :title %>
+			<%= f.text_field :title %>
+	
+			<%= f.label :mood %>
+			<%= f.text_field :mood %>
+	
+			<%= f.label :content %>
+			<%= f.text_area :content %>
+			<br/><br/>
+			<%= f.submit 'Post', class: 'submit' %>
+
+		<% end %>
+	</div>
